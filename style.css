@@ -1,0 +1,126 @@
+/* style.css */
+
+/* Body layout */
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Topbar - vast, zelfde kleur als sidebar */
+header.topbar {
+  background: #343a40;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Sidebar - sticky */
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.sidebar a:hover {
+  background-color: #495057;
+}
+
+.sidebar .nav-link.active {
+  background-color: #495057;
+  font-weight: bold;
+}
+
+/* Main content: rekening houden met topbar en sidebar */
+.main {
+  flex-grow: 1;
+  padding: 4rem 2rem 2rem 2rem; /* top padding om header ruimte te geven */
+  overflow-x: auto;
+}
+
+/* Sticky header voor tabel */
+table.dataTable thead th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+}
+
+/* Kleinere badge font */
+.badge {
+  font-size: 0.85em;
+}
+
+/* Hover effect op rij */
+table.dataTable tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.card-title {
+  font-weight: 600;
+}
+.btn {
+  font-size: 1rem;
+}
+
+/* Zorg dat de breadcrumb-container begint waar .main content begint (sidebar + padding) */
+.breadcrumb-container {
+  margin-left: calc(250px + 2rem); /* sidebar width + main padding-left */
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #ced4da;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: #e9ecef;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  font-weight: 600;
+  color: white;
+}
+
+/* Kleine aanpassing voor header titel links */
+header.topbar .header-left h5 {
+  margin: 0;
+}

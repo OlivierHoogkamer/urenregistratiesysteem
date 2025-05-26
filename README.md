@@ -16,8 +16,8 @@ This project is an **hours registration system** built with PHP and CSS. It allo
 2. Host the project on a local or online server (e.g., XAMPP, Apache).
 3. Ensure database connection settings are properly configured.
 
-Contributing
+## Contributing
 Feel free to submit pull requests or report issues to improve the system.
 
-License
+## License
 This project does not have a specified license. Please check with the author before using it for commercial purposes.
